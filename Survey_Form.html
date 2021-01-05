@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Form</title>
+	<style type="text/css">
+	body {
+		display: flex;
+		flex-direction: column;
+		background-color: hsl(0, 0%, 90%);
+	  	top: 10px;
+	}
+	#title {
+		font-family: TimesNewRoman;
+		text-align: center;
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+	}
+	button:hover {
+  		color: blue;
+  	}
+	</style>
+</head>
+<body>
+	<header>
+		<h1 id="title">Football Summer Camp: Application Form</h1>
+	</header>
+
+	<main>
+		<p>it will take only few minutes</p>
+		<form>
+			<label for="first name">First name</label>
+			<input id="first name" type="text" placeholder="first name" name="first name" required="">
+			<label for="last name">Last name</label>
+			<input id="last name" type="text" placeholder="last name" name="last name" required="">
+			<label for="email">e-mail</label>
+			<input id="email" type="email" placeholder="e-mail" name="email" required="">
+			<label for="age">Age</label>
+			<input id="age" type="number" placeholder="age" name="age" required="">
+			<label>Gender</label>
+			<select name="gender">
+				<option value="boy">boy</option>
+				<option value="girl">girl</option>
+			</select><br>
+			<label>Foot</label>
+			<label for="left">
+				<input id="left" value="left" type="radio" name="foot">Left
+			</label>
+			<label for="right">
+				<input id="right" value="right" type="radio" name="foot">Right
+			</label>
+			<label for="both">
+				<input id="both" value="both" type="radio" name="foot">Both
+			</label><br>
+			<label>Position</label>
+			<label for="goalkeeper">
+				<input id="goalkeeper" value="goalkeeper" type="checkbox" name="position">goalkeeper
+			</label>
+			<label for="defender">
+				<input id="defender" value="defender" type="checkbox" name="position">defender
+			</label>
+			<label for="midfielder">
+				<input id="midfielder" value="midfielder" type="checkbox" name="position">midfielder
+			</label>
+			<label for="forward">
+				<input id="forward" value="forward" type="checkbox" name="position">forward
+			</label><br>
+			<label>Any comments or suggestions</label>
+			<textarea maxlength="1000" placeholder="Any comments or suggestions" name="comments"></textarea><br>
+			<button type="submit">Submit</button>
+		</form>
+		
+	</main>
+	<footer>
+	</footer>
+</body>
+</html>
