@@ -6,9 +6,12 @@
 	body {
 		display: flex;
 		flex-direction: column;
-		background-color: hsl(0, 0%, 90%);
+		background-color: white;
 	  	top: 10px;
-	}
+	  	margin-left: 200px;
+	  	margin-right: 200px;
+	  	
+	  }
 	#title {
 		font-family: TimesNewRoman;
 		text-align: center;
@@ -16,6 +19,11 @@
 	form {
 		display: flex;
 		flex-direction: column;
+	}
+	.form-box {
+		border: 1px solid black;
+		padding: 20px;
+		background-color: hsl(162, 100%, 98%);
 	}
 	button:hover {
   		color: blue;
@@ -26,10 +34,9 @@
 	<header>
 		<h1 id="title">Football Summer Camp: Application Form</h1>
 	</header>
-
 	<main>
 		<p>it will take only few minutes</p>
-		<form>
+		<form class="form-box">
 			<label for="first name">First name</label>
 			<input id="first name" type="text" placeholder="first name" name="first name" required="">
 			<label for="last name">Last name</label>
@@ -43,16 +50,18 @@
 				<option value="boy">boy</option>
 				<option value="girl">girl</option>
 			</select><br>
-			<label>Foot</label>
-			<label for="left">
-				<input id="left" value="left" type="radio" name="foot">Left
-			</label>
-			<label for="right">
-				<input id="right" value="right" type="radio" name="foot">Right
-			</label>
-			<label for="both">
-				<input id="both" value="both" type="radio" name="foot">Both
-			</label><br>
+			<fieldset>
+				<legend>Foot</legend>
+				<label for="left">
+					<input id="left" value="left" type="radio" name="foot">Left
+				</label>
+				<label for="right">
+					<input id="right" value="right" type="radio" name="foot">Right
+				</label>
+				<label for="both">
+					<input id="both" value="both" type="radio" name="foot">Both
+				</label>
+			</fieldset><br>
 			<label>Position</label>
 			<label for="goalkeeper">
 				<input id="goalkeeper" value="goalkeeper" type="checkbox" name="position">goalkeeper
@@ -70,7 +79,6 @@
 			<textarea maxlength="1000" placeholder="Any comments or suggestions" name="comments"></textarea><br>
 			<button type="submit">Submit</button>
 		</form>
-		
 	</main>
 	<footer>
 	</footer>
