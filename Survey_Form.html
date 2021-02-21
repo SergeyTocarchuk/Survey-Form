@@ -1,86 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
 	<title>Survey Form</title>
-	<style type="text/css">
-	body {
-		display: flex;
-		flex-direction: column;
-		background-color: white;
-	  	top: 10px;
-	  	margin-left: 200px;
-	  	margin-right: 200px;
-	  	
-	  }
-	#title {
-		font-family: TimesNewRoman;
-		text-align: center;
-	}
-	form {
-		display: flex;
-		flex-direction: column;
-	}
-	.form-box {
-		border: 1px solid black;
-		padding: 20px;
-		background-color: hsl(162, 100%, 98%);
-	}
-	button:hover {
-  		color: blue;
-  	}
-	</style>
 </head>
 <body>
-	<header>
-		<h1 id="title">Football Summer Camp: Application Form</h1>
-	</header>
-	<main>
-		<p>it will take only few minutes</p>
-		<form class="form-box">
-			<label for="first name">First name</label>
-			<input id="first name" type="text" placeholder="first name" name="first name" required="">
-			<label for="last name">Last name</label>
-			<input id="last name" type="text" placeholder="last name" name="last name" required="">
-			<label for="email">e-mail</label>
-			<input id="email" type="email" placeholder="e-mail" name="email" required="">
-			<label for="age">Age</label>
-			<input id="age" type="number" placeholder="age" name="age" required="">
-			<label>Gender</label>
-			<select name="gender">
-				<option value="boy">boy</option>
-				<option value="girl">girl</option>
-			</select><br>
-			<fieldset>
-				<legend>Foot</legend>
-				<label for="left">
-					<input id="left" value="left" type="radio" name="foot">Left
+	<div class="container">
+		<header>
+			<h1>Ukrainian Beer Market Survey Form</h1>
+			<p>Thank you for taking the time to help us</p>
+		</header>
+
+		<form>
+			<div class="form-group">
+				<label id="name-label" for="name">Name</label>
+				<input
+					type="text"
+					name="name"
+					id="name"
+					class="form-control"
+					placeholder="Enter your name"
+					required
+				/>
+			</div>
+			<div class="form-group">
+				<label id="email-labe" for="email">Email</label>
+				<input
+					type="text"
+					name="email"
+					id="email"
+					class="form-control"
+					placeholder="Enter your email"
+					required
+				/>
+			</div>
+			<div class="form-group">
+				<label id="number-label" for="number">Age</label>
+				<input 
+					type="number"
+					name="age"
+					id="number"
+					class="form-control"
+					min="18"
+					max="99"
+					placeholder="Age"
+					required
+				/>
+			</div>
+			<div class="form-group">
+				<p>Which option best describes your current role?</p>
+				<select id="dropdown" name="role" class="form-control" required>
+					<option disabled selected value>Select current role</option>
+					<option value="student">Student</option>
+					<option value="job">Full Time Job</option>
+					<option value="entrepreneur">Entrepreneur</option>
+					<option value="unemployed">Unemployed</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<p>What sort of beer do you prefer?</p>
+				<label>
+					<input 
+						name="sort"
+						value="lager"
+						type="radio"
+						class="input-radio"
+						checked/>Lager
 				</label>
-				<label for="right">
-					<input id="right" value="right" type="radio" name="foot">Right
+				<label>
+					<input 
+						name="sort"
+						value="stout"
+						type="radio"
+						class="input-radio"
+						/>Stout
 				</label>
-				<label for="both">
-					<input id="both" value="both" type="radio" name="foot">Both
+				<label>
+					<input 
+						name="sort"
+						value="weissbier"
+						type="radio"
+						class="input-radio"
+					/>Weissbier
 				</label>
-			</fieldset><br>
-			<label>Position</label>
-			<label for="goalkeeper">
-				<input id="goalkeeper" value="goalkeeper" type="checkbox" name="position">goalkeeper
-			</label>
-			<label for="defender">
-				<input id="defender" value="defender" type="checkbox" name="position">defender
-			</label>
-			<label for="midfielder">
-				<input id="midfielder" value="midfielder" type="checkbox" name="position">midfielder
-			</label>
-			<label for="forward">
-				<input id="forward" value="forward" type="checkbox" name="position">forward
-			</label><br>
-			<label>Any comments or suggestions</label>
-			<textarea maxlength="1000" placeholder="Any comments or suggestions" name="comments"></textarea><br>
-			<button type="submit">Submit</button>
+			</div>
+			<div class="form-group">
+				<p>What make you to select beer in outlet</p>
+				<select id="select" name="select" class="form-control" required>
+					<option disabled selected value>Select your choice</option>
+					<option value="advertisment">Advertisment</option>
+					<option value="POSM">POS-material in outlet</option>
+					<option value="friends">Friends advice</option>
+					<option value="brand">Brand you recognise</option>
+					<option value="discount">Discount</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<p>What national breweries do you know in Ukraine?</p>
+				<label>
+					<input 
+						name="brewery"
+						value="inbev"
+						type="checkbox"
+						class="input-checkbox"
+					/>AB InBev
+				</label>
+				<label>
+					<input 
+						name="brewery"
+						value="carlsberg"
+						type="checkbox"
+						class="input-checkbox"
+					/>Carlsberg
+				</label>
+				<label>
+					<input
+					name="brewery"
+					value="obolon"
+					type="checkbox"
+					class="input-checkbox" 
+					/>Obolon
+				</label>
+				<label>
+					<input 
+					name="brewery"
+					value="ppb"
+					type="checkbox"
+					class="input-checkbox"
+					/>Persha pryvatna brovarnya
+				</label>
+				<label>
+					<input 
+					name="brewery"
+					value="other"
+					type="checkbox"
+					class="input-checkbox"
+					/>other
+				</label>
+			</div>
+			<div class="form-group">
+				<p>Any comments or suggestions?</p>
+				<textarea
+				id="comments"
+				class="input-textarea"
+				name="comment"
+				placeholder="Enter your comments here ...">
+				</textarea>
+			</div>
+			<div class="form-group">
+				<button
+					type="submit"
+					id="submit"
+					class="submit-btn">Submit
+				</button>
+			</div>
 		</form>
-	</main>
-	<footer>
-	</footer>
+	</div>
 </body>
 </html>
